@@ -19,7 +19,7 @@ body {
     margin: 40px auto;
     padding: 30px;
     background-image: url("js.jpg") ; /* Slightly transparent background */
-   background-size: cover;
+    background-size: cover;
     border-radius: 20px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
     text-align: center; /* Center-align text */
