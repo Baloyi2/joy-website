@@ -1,0 +1,113 @@
+/* Reset default styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f0e1ff, #ffecf0); /* Soft gradient background */
+    color: #b83636;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Container styles */
+.styles-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-image: url("js.jpg") ; /* Slightly transparent background */
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Center-align text */
+}
+
+/* Header styles */
+h1 {
+    font-size: 2.8em;
+    color: #d5006d; /* Bright pink */
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+/* Paragraph styles */
+p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #b54242; /* Darker gray */
+}
+
+/* Navigation button styles */
+.nav-buttons {
+    display: flex; /* Use flexbox to arrange items in a row */
+    justify-content: center; /* Center items horizontally */
+    gap: 15px; /* Space between buttons */
+}
+
+.nav-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #fff;
+    background: linear-gradient(90deg, #ff6f61, #d5006d); /* Gradient button */
+    border-radius: 30px;
+    text-decoration: none; /* Remove underline */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation effects */
+}
+
+.nav-button:hover {
+    transform: scale(1.05); /* Slightly enlarge button */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+/* Back to Home button styles */
+.back-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    color: #fff;
+    background: linear-gradient(90deg, #e464d1, #6b108f); /* Red gradient */
+    border-radius: 30px;
+    text-decoration: none; /* Remove underline */
+    position: relative; /* For pseudo-element */
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation effects */
+}
+
+.back-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* Light overlay */
+    border-radius: 30px;
+    transform: scaleX(0); /* Initially hide */
+    transition: transform 0.3s; /* Transition effect for overlay */
+}
+
+.back-button:hover {
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+.back-button:hover::after {
+    transform: scaleX(1); /* Show overlay on hover */
+}
+
+/* Footer styles */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #777; /* Gray color */
+}
+
+footer p {
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-radius: 10px;
+}

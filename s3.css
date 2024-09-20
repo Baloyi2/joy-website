@@ -1,0 +1,63 @@
+/* Reset default styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f0e1ff, #ffecf0); /* Soft gradient background */
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-image: url("l.jpg");
+    background-size: cover; /* Use cover for better image scaling */
+    
+    
+    text-align: center; /* Center-align text */
+}
+
+/* Header styles */
+h1 {
+    font-size: 2.5em; /* Slightly smaller size for the title */
+    color: #d5006d; /* Bright pink */
+    margin-bottom: 15px;
+}
+
+/* Image styles */
+img {
+    width: 70%; /* Responsive image size */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    margin-bottom: 20px; /* Space below the image */
+}
+
+/* Paragraph styles */
+p {
+    font-size: 1.5em;
+    color: #555; /* Darker gray */
+    margin-bottom: 30px; /* Space below the paragraph */
+}
+
+/* Back button styles */
+.back-button {
+    display: inline-block;
+    margin: 10px; /* Space around buttons */
+    padding: 12px 25px;
+    font-size: 1.2em;
+    color: #fff;
+    background: linear-gradient(90deg, #d43ccf, #a52a61); /* Gradient background */
+    border-radius: 30px;
+    text-decoration: none; /* Remove underline */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation effects */
+}
+
+.back-button:hover {
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}

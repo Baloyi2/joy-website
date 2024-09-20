@@ -1,0 +1,90 @@
+/* Reset default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f0e1ff, #ffecf0); /* Soft gradient background */
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    text-align: center; /* Center-align text */
+}
+
+/* Image styles */
+.image-row {
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: center; /* Center the images */
+    flex-wrap: wrap; /* Allow images to wrap if necessary */
+    margin: 20px 0; /* Space around the image row */
+}
+
+.image-row img {
+    width: 20%; /* Smaller size for images */
+    height: auto;
+    border-radius: 10px;
+    margin: 10px; /* Space between images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* Pricing styles */
+.pricing {
+    background: rgba(255, 250, 205, 0.8); /* Light yellow background */
+    padding: 20px;
+    margin-right: 100px;
+    margin-left: 100px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin-top: 20px; /* Space above pricing section */
+}
+
+.pricing h2 {
+    color: #d5006d; /* Bright pink for heading */
+    margin-bottom: 10px;
+}
+
+.pricing p {
+    font-size: 1.2em;
+    color: #555; /* Darker gray */
+    margin: 5px 0; /* Space between pricing items */
+}
+
+/* Back to Styles button */
+.back-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    color: #fff;
+    background: linear-gradient(90deg, #ff6f61, #d5006d); /* Bright pink gradient */
+    border-radius: 30px;
+    text-decoration: none; /* Remove underline */
+    position: relative; /* For pseudo-element */
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation effects */
+}
+
+.back-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* Light overlay */
+    border-radius: 30px;
+    transform: scaleX(0); /* Initially hide */
+    transition: transform 0.3s; /* Transition effect for overlay */
+}
+
+.back-button:hover {
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+.back-button:hover::after {
+    transform: scaleX(1); /* Show overlay on hover */
+}
