@@ -1,0 +1,128 @@
+/* Reset default styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url("dw.jpg");
+    background-size: cover; /* Background image */
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Container styles */
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    background-image: url("d.jpg"); /* Background image */
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden; /* Contain child elements */
+    text-align: center; /* Center-align text */
+}
+
+/* Decorative elements in container */
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(224, 110, 167, 0.1); /* Soft pink overlay */
+    border-radius: 20px;
+    z-index: 0;
+}
+
+.container h1 {
+    position: relative; /* Position for layering */
+    z-index: 1; /* Ensure text is above overlay */
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    color: #d81b60; /* Deep pink color */
+    text-align: center;
+    background: linear-gradient(90deg, #d81b60, #ff6f61); /* Gradient text */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 10px 0;
+}
+
+/* Paragraph styles */
+p {
+    position: relative; /* Position for layering */
+    z-index: 2; /* Ensure text is above overlay */
+    font-size: 1.35em;
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: hsla(91, 18%, 64%, 0.897); /* Very light green background */
+    border-radius: 7px; /* Remove borders, keep rounded corners */
+    transition: transform 0.3s;
+    text-align: center; /* Center-align paragraph text */
+}
+
+p:hover {
+    transform: scale(1.02); /* Slightly enlarge paragraph on hover */
+}
+
+/* Strong text styles */
+strong {
+    color: #d81b60; /* Highlighted text color */
+}
+
+/* Link styles */
+a {
+    color: #1976D2; /* Bright blue link color */
+    text-decoration: none;
+    font-weight: bold; /* Bold links */
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+a:hover {
+    color: #1565C0; /* Darker shade on hover */
+    text-shadow: 0 0 10px rgba(255, 105, 180, 0.7); /* Glow effect */
+}
+
+/* Button styles */
+.back-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    color: #ffffff;
+    background: linear-gradient(90deg, #ff6f61, #ff9a61); /* Gradient button */
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    position: relative; /* For pseudo-element */
+    overflow: hidden;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.back-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    transform: scaleX(0); /* Initially hide */
+    transition: transform 0.3s;
+}
+
+.back-button:hover {
+    background-color: #ff4a3b; /* Darker coral on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.back-button:hover::after {
+    transform: scaleX(1); /* Show overlay on hover */
+}
